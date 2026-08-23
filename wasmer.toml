@@ -1,0 +1,14 @@
+[package]
+name = "mdking874/gateway"
+version = "1.0.0"
+run = "gateway:app"
+
+[dependencies]
+python = "3.11"
+fastapi = "*"
+uvicorn = "*"
+requests = "*"
+sqlalchemy = "*"
+pydantic = "*"
+python-jose = "*"
+bcrypt = "*"
