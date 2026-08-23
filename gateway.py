@@ -808,3 +808,10 @@ def submit_trx(payment_id: str, trx_id: str = Form(...), session: Session = Depe
         
     session.commit()
     return HTMLResponse("<h2 style='text-align:center; color:green; margin-top:50px;'>✅ Payment Completed Successfully!</h2>")
+
+return HTMLResponse("<h2 style='text-align:center; color:green; margin-top:50px;'>✅ Payment Completed Successfully!</h2>")
+
+# === রেন্ডারে রান করার জন্য এই অংশটুকু একদম শেষে বসিয়ে দিন ===
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("gateway:app", host="0.0.0.0", port=port)
